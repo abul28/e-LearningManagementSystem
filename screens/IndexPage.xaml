@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LMS.Views.IndexPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="purple.jpg">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Margin="0,20,0,0">
+        <Image Source="ams.png" Aspect="AspectFit"  WidthRequest="90" HeightRequest="90"/>
+        <Label Text=" 'Oh Lord Increase Me In knowledge' " HorizontalOptions="CenterAndExpand" FontSize="10" TextColor="white"/>
+        <Label Text="LEARNING MANAGEMENT SYSTEM" HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold" FontFamily="Ubuntu" TextColor="white"/>
+
+
+
+        <Frame HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" HasShadow="True" Opacity="0.7" CornerRadius="20" HeightRequest="140">
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+                <Button Text="Student" x:Name="student" TextColor="White" Margin="20,0,20,0" BackgroundColor="#9300ff" CharacterSpacing="2" FontSize="20" FontFamily="poppins" FontAttributes="Bold" CornerRadius="25" Clicked="OnStudentButtonClicked"/>
+                
+                <Label Text="or" TextColor="Black" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+
+                <Button Text="Teacher" x:Name="teacher" TextColor="White" Margin="20,0,20,0" BackgroundColor="#9300ff" CharacterSpacing="2" FontSize="20" FontFamily="poppins" FontAttributes="Bold" CornerRadius="25" Clicked="OnTeacherButtonClicked"/>
+            </StackLayout>
+        </Frame>
+        
+
+    </StackLayout>
+   
+
+</ContentPage>
