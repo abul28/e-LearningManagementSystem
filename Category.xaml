@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LMS.Views.Category"
+             NavigationPage.HasNavigationBar="True"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="White">
+
+    <ContentPage.Content>
+
+
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="15,40,15,0">
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="25"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Text="Semester : " FontSize="15" FontAttributes="Bold" TextColor="Black" />
+            <Picker Grid.Row="1" Grid.Column="0" TextColor="Black" Title="--Select--"
+                x:Name="SelectYear"
+                TitleColor="Gray">
+            </Picker>
+
+            <Label Grid.Row="0" Grid.Column="1" Text="Regulation : " FontSize="15" FontAttributes="Bold" TextColor="Black" />
+            <Picker Grid.Row="1" Grid.Column="1" TextColor="Black" Title="--Select--"
+                x:Name="SelectRegulation"
+                TitleColor="Gray">
+            </Picker>
+
+            <BoxView Grid.Row="2" HeightRequest="30" HorizontalOptions="FillAndExpand"/>
+
+            <ImageButton Grid.Row="3" Grid.Column="0" Source="circular.png" HeightRequest="35" WidthRequest="35" BackgroundColor="Transparent" Clicked="ViewDocument"/>
+            <Button Grid.Row="4" Grid.Column="0" Text="SYLLABUS" TextColor="Black" FontSize="Default" FontAttributes="Bold" BackgroundColor="Transparent" HeightRequest="40" HorizontalOptions="FillAndExpand" Clicked="ViewDocument" />
+
+            <ImageButton Grid.Row="3" Grid.Column="1" Source="time_table.png" HeightRequest="35" WidthRequest="35" BackgroundColor="Transparent" Clicked="ViewDocument" />
+            <Button Grid.Row="4" Grid.Column="1" Text="TIME TABLE" FontSize="Default"  FontAttributes="Bold" TextColor="Black" BackgroundColor="Transparent" HeightRequest="40" HorizontalOptions="FillAndExpand" Clicked="ViewDocument" />
+
+            <BoxView Grid.Row="5" HeightRequest="30" HorizontalOptions="FillAndExpand"/>
+
+            <ImageButton Grid.Row="6" Grid.Column="0" Source="note.png" HeightRequest="35" WidthRequest="35" BackgroundColor="Transparent" Clicked="ViewDocument" />
+            <Button Grid.Row="7" Grid.Column="0" Text="NOTES" TextColor="Black" FontAttributes="Bold" FontSize="Default" BackgroundColor="Transparent" HeightRequest="40" HorizontalOptions="FillAndExpand" Clicked="ViewDocument" />
+
+            <ImageButton Grid.Row="6" Grid.Column="1" Source="qs_bank.png" HeightRequest="35" WidthRequest="35" BackgroundColor="Transparent" Clicked="ViewDocument" />
+            <Button Grid.Row="7" Grid.Column="1" Text="Q/A BANK" FontSize="Default"  FontAttributes="Bold" TextColor="Black" BackgroundColor="Transparent" HeightRequest="40" HorizontalOptions="FillAndExpand" Clicked="ViewDocument"/>
+
+            <BoxView Grid.Row="8" HeightRequest="30" HorizontalOptions="FillAndExpand"/>
+
+            <ImageButton Grid.Row="9" Grid.Column="0" Source="sem_prepare.png" HeightRequest="35" WidthRequest="35" BackgroundColor="Transparent" Clicked="ViewDocument" />
+            <Button Grid.Row="10" Grid.Column="0" Text="SEM PREPARE" TextColor="Black" FontAttributes="Bold" FontSize="Default" BackgroundColor="Transparent" HeightRequest="40" HorizontalOptions="FillAndExpand" Clicked="ViewDocument" />
+
+            <ImageButton Grid.Row="9" Grid.Column="1" Source="calci.png" HeightRequest="35" WidthRequest="35" BackgroundColor="Transparent" Clicked="Calculator" />
+            <Button Grid.Row="10" Grid.Column="1" Text="CGPA" FontSize="Default" TextColor="Black" FontAttributes="Bold" BackgroundColor="Transparent" HeightRequest="40" HorizontalOptions="FillAndExpand" Clicked="Calculator" />
+
+        </Grid>
+        
+    </ContentPage.Content>
+
+</ContentPage>

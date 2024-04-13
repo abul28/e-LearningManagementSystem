@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LMS.Views.AboutPage"
+             xmlns:vm="clr-namespace:LMS.ViewModels"
+             Title="{Binding Title}"
+             FlyoutLayoutBehavior="Split"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="True"
+             BackgroundColor="White">
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Menu">
+
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Text="User" TextColor="Black" />
+                    <Button Grid.Row="1" ImageSource="Signout.png"  Text="Sign Out" FontSize="Subtitle" TextColor="Black" BackgroundColor="Transparent" FontAttributes="Bold" Clicked="Signout" />
+                </Grid>
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+
+    <FlyoutPage.Detail>
+
+        <ContentPage>
+
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="15,30,15,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="Select Your Department :" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" ColumnSpacing="20" Margin="20,60,0,20" >
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Row="0" Grid.Column="0" Source="itimg.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35" />
+                    <Button Grid.Row="0" Grid.Column="1" x:Name="itbtn" Text="IT" FontSize="20" FontAttributes="Bold" TextColor="Black" BackgroundColor="Transparent" Clicked="CategoryPage"/>
+
+                    <Image Grid.Row="0" Grid.Column="2" Source="cseimg.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35" />
+                    <Button Grid.Row="0" Grid.Column="3" x:Name="csebtn" Text="CSE" FontSize="20" FontAttributes="Bold" TextColor="Black" BackgroundColor="Transparent" Clicked="CategoryPage"/>
+
+                    <Image Grid.Row="1" Grid.Column="0" Source="eceimg.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35"  Margin="0,25,0,0" />
+                    <Button Grid.Row="1" Grid.Column="1" x:Name="ecebtn" Text="ECE" FontSize="20" FontAttributes="Bold" TextColor="Black" BackgroundColor="Transparent" Clicked="CategoryPage" Margin="0,25,0,0"/>
+
+                    <Image Grid.Row="1" Grid.Column="2" Source="eeeimg.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35" Margin="0,25,0,0" />
+                    <Button Grid.Row="1" Grid.Column="3" x:Name="eeebtn" Text="EEE" FontSize="20" FontAttributes="Bold" TextColor="Black" BackgroundColor="Transparent" Clicked="CategoryPage" Margin="0,25,0,0"/>
+
+                    <Image Grid.Row="2" Grid.Column="0" Source="mechimg.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35" Margin="0,25,0,0" />
+                    <Button Grid.Row="2" Grid.Column="1" x:Name="mechbtn" Text="MECH" FontSize="20" FontAttributes="Bold" TextColor="Black" BackgroundColor="Transparent" Clicked="CategoryPage" Margin="0,25,0,0"/>
+
+                    <Image Grid.Row="2" Grid.Column="2" Source="civilimg.png" Aspect="AspectFit" HeightRequest="30" WidthRequest="35" Margin="0,25,0,0" />
+                    <Button Grid.Row="2" Grid.Column="3" x:Name="civilbtn" Text="CIVIL" FontSize="20" FontAttributes="Bold" TextColor="Black" BackgroundColor="Transparent" Clicked="CategoryPage" Margin="0,25,0,0"/>
+
+                    <Image Grid.Row="3" Grid.Column="0" Source="aidsimg.png" Aspect="AspectFit" HeightRequest="35" WidthRequest="35" Margin="0,25,0,0" />
+                    <Button Grid.Row="3" Grid.Column="1" x:Name="aidsbtn" Text="AIDS" FontSize="20" FontAttributes="Bold" TextColor="Black" BackgroundColor="Transparent" Clicked="CategoryPage" Margin="0,25,0,0"/>
+                </Grid>
+            </Grid>
+        
+    </ContentPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>
